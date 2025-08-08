@@ -3,6 +3,7 @@ import { supabase } from "../../supabase/supabaseClient";
 import { useNavigate } from "react-router-dom"
 
 const Login = () => {
+    const navigate = useNavigate()
     const [ email, setEmail ] = useState('')
     const [ password, setPassword ] = useState('')
 
@@ -23,7 +24,7 @@ const Login = () => {
             return;
         }
 
-        if (!data || data.length === 0) {
+        if (!data) {
             alert("Email ou senha inválidos");
             return;
         }
