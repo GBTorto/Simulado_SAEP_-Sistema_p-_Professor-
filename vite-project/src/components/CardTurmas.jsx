@@ -15,6 +15,9 @@ const cardTurmas = () => {
                 <p>teste</p>
                 <p>teste2</p>
             </div>
+            <div className="tela-turmas__card--btn">
+                <button className="card-btn" onClick={acessar}>Entrar</button>
+            </div>
         </div>
     )
 }
