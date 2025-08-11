@@ -12,6 +12,7 @@ const CriarTurmas = () => {
         const {data: turma, error: erroBusca} = await supabase
         .from('turma')
         .select('*')
+        .eq('nome_turma', nome_turma)
 
         if (erroBusca){
             console.log(erroBusca.message)
